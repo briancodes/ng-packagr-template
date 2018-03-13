@@ -9,21 +9,21 @@
 - Travis CI support with Chromium Browser
 - Build output to `dist/app` and `dist/lib` for easy upload to *GitHub Pages* and *npm publish*
 
-## .angular-cli.json
-
-The `apps` array includes a second app called `lib`. This is a copy of `apps[0]` json, and allows us to use the *Angular CLI* when generating components/modules etc
-
-```
-ng generate module new-mod --flat=true --app=lib
-```
-
-The above command would generate a `new-mod.module.ts` file in `lib/app` folder
-
 ## lib folder
 
 The `lib/app` folder contains all of the files for our library
 
 All of these files (module and files) are exported from the `public_api.ts` file. Only non-external imports reachable from this file are included in the library build. All other imports need to be listed as *peerDependencies* in the `lib/package.json` file
+
+### .angular-cli.json
+
+The `apps` array includes a second app called `lib`. This is a copy of `apps[0]` json, and allows us to use the *Angular CLI* when generating components/modules within the 'lib' folder
+
+```
+ng generate module new-mod --flat=true --app=lib
+```
+
+The above command would generate a `new-mod.module.ts` file in `lib/app`
 
 ## Main Application - Development Mode
 
