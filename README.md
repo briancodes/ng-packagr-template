@@ -4,8 +4,8 @@
 
 - Angular CLI enabled
 - Live-reload of root app during lib development
-- Algular CLI Karma & Jasmine tests: library unit tests and bundle module, demo app and non-bundled module
-- Library folder accessible to Angular CLI for `ng generate` commands (separate `apps` config in `.angular-cli.json`)
+- Algular CLI Karma & Jasmine tests: runs unit tests for the bundled library module the demo app
+- Library folder accessible to Angular CLI for `ng generate` commands
 - Travis CI support with Chromium Browser
 - Build output to `dist/app` and `dist/lib` for easy upload to *GitHub Pages* and *npm publish*
 
